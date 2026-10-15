@@ -94,8 +94,8 @@ export default function Insurance() {
             className="rounded-3xl border border-brand-100 bg-white p-7 shadow-sm"
           >
             <h3 className="mb-6 flex items-center gap-3 text-xl font-bold text-brand-900">
-              <span className="grid size-11 place-items-center rounded-xl bg-brand-100 text-brand-600">
-                <ShieldCheck className="size-6" />
+              <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-brand-100 text-brand-600">
+                <ShieldCheck className="size-6 shrink-0" />
               </span>
               {t('insurance.insurers')}
             </h3>
@@ -112,7 +112,7 @@ export default function Insurance() {
                   key={name}
                   variants={pop}
                   whileHover={{ scale: 1.04, y: -3 }}
-                  className="group flex items-center gap-3 rounded-2xl border border-brand-100 bg-brand-50/60 p-3.5 transition-colors hover:border-brand-500 hover:bg-white hover:shadow-lg hover:shadow-brand-500/10"
+                  className="group flex min-w-0 items-center gap-3 rounded-2xl border border-brand-100 bg-brand-50/60 p-3.5 transition-colors hover:border-brand-500 hover:bg-white hover:shadow-lg hover:shadow-brand-500/10"
                 >
                   <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-brand-500 to-brand-700 text-sm font-extrabold text-white transition-transform duration-300 group-hover:rotate-6">
                     {initials(name)}
@@ -132,8 +132,8 @@ export default function Insurance() {
             className="rounded-3xl border border-brand-100 bg-white p-7 shadow-sm"
           >
             <h3 className="mb-6 flex items-center gap-3 text-xl font-bold text-brand-900">
-              <span className="grid size-11 place-items-center rounded-xl bg-accent-500/10 text-accent-500">
-                <CreditCard className="size-6" />
+              <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-accent-500/10 text-accent-500">
+                <CreditCard className="size-6 shrink-0" />
               </span>
               {t('insurance.cards')}
             </h3>
@@ -153,7 +153,7 @@ export default function Insurance() {
                     variants={pop}
                     whileHover={{ y: -8, rotate: -2, scale: 1.03 }}
                     transition={{ type: 'spring', stiffness: 300, damping: 18 }}
-                    className={`group relative aspect-[1.6] overflow-hidden rounded-2xl bg-gradient-to-br ${bg} ${text} p-4 shadow-lg`}
+                    className={`group relative min-w-0 aspect-[1.6] overflow-hidden rounded-2xl bg-gradient-to-br ${bg} ${text} p-4 shadow-lg`}
                   >
                     {/* Shine sweep */}
                     <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
@@ -161,7 +161,7 @@ export default function Insurance() {
                       <div className="flex items-start justify-between">
                         {/* Card chip */}
                         <span className="h-7 w-9 rounded-md bg-gradient-to-br from-yellow-200 to-yellow-500 opacity-90" />
-                        <Icon className="size-6 opacity-80" />
+                        <Icon className="size-6 shrink-0 opacity-80" />
                       </div>
                       <div>
                         <p className="text-xs tracking-[0.25em] opacity-70">

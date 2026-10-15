@@ -35,6 +35,11 @@ body {
   overflow-x: clip;
 }
 
+/* Keep icon glyphs at their intended size in narrow flex rows. */
+svg {
+  flex-shrink: 0;
+}
+
 /* Allow long translated words and URLs to wrap inside narrow layouts. */
 *,
 *::before,

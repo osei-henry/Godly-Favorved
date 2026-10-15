@@ -30,8 +30,8 @@ export default function Footer() {
         {/* Brand */}
         <div>
           <Link to="/#home" className="flex items-center gap-2.5">
-            <span className="relative grid size-11 place-items-center rounded-xl bg-gradient-to-br from-brand-500 to-brand-700 shadow-lg shadow-brand-500/30">
-              <Eye className="size-6" />
+            <span className="relative grid size-11 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-brand-500 to-brand-700 shadow-lg shadow-brand-500/30">
+              <Eye className="size-6 shrink-0" />
               <span className="absolute -right-1 -top-1 size-3 rounded-full border-2 border-brand-900 bg-accent-500" />
             </span>
             <span className="leading-tight">

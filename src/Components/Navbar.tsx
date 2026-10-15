@@ -61,8 +61,8 @@ export default function Navbar() {
       >
         {/* Logo */}
         <Link to="/#home" className="flex items-center gap-2.5">
-          <span className="relative grid size-10 place-items-center rounded-xl bg-gradient-to-br from-brand-500 to-brand-700 text-white shadow-lg shadow-brand-500/30">
-            <Eye className="size-5" />
+          <span className="relative grid size-10 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-brand-500 to-brand-700 text-white shadow-lg shadow-brand-500/30">
+            <Eye className="size-5 shrink-0" />
             <span className="absolute -right-1 -top-1 size-3 rounded-full border-2 border-white bg-accent-500" />
           </span>
           <span className="leading-tight">

@@ -143,8 +143,8 @@ export default function Booking() {
             className="absolute -right-16 -top-16 size-56 rounded-full bg-accent-500/40 blur-2xl"
           />
           <div className="relative">
-            <span className="grid size-14 place-items-center rounded-2xl bg-white/15 backdrop-blur">
-              <CalendarDays className="size-7" />
+            <span className="grid size-14 shrink-0 place-items-center rounded-2xl bg-white/15 backdrop-blur">
+              <CalendarDays className="size-7 shrink-0" />
             </span>
             <h2 className="mt-6 font-display text-3xl font-bold leading-tight text-balance sm:text-4xl">
               {t('booking.title')}
@@ -157,7 +157,7 @@ export default function Booking() {
               href={`tel:+${clinic.whatsappNumber}`}
               className="mt-8 flex items-center gap-3 font-semibold transition hover:text-brand-100"
             >
-              <span className="grid size-11 place-items-center rounded-full bg-white/15">
+              <span className="grid size-11 shrink-0 place-items-center rounded-full bg-white/15">
                 <Phone className="size-5 shrink-0" />
               </span>
               {clinic.phoneDisplay}
