@@ -12,7 +12,7 @@ export default function LatestPosts() {
   return (
     <section
       id="latest"
-      className="relative scroll-mt-20 overflow-hidden bg-gradient-to-b from-brand-50 to-white py-24"
+      className="relative scroll-mt-20 overflow-hidden bg-gradient-to-b from-brand-50 to-white py-16 sm:py-24"
     >
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
         {/* Heading */}
@@ -23,7 +23,7 @@ export default function LatestPosts() {
           transition={{ duration: 0.6 }}
           className="mx-auto max-w-2xl text-center"
         >
-          <h2 className="font-display text-4xl font-bold text-brand-900 sm:text-5xl">
+          <h2 className="font-display text-3xl font-bold leading-tight text-balance text-brand-900 sm:text-5xl">
             {t('blog.latest')}
           </h2>
           <div className="mx-auto mt-4 h-1 w-20 rounded-full bg-gradient-to-r from-brand-500 to-accent-500" />

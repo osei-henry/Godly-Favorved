@@ -116,7 +116,7 @@ export default function Booking() {
   return (
     <section
       id="booking"
-      className="relative scroll-mt-20 overflow-hidden bg-brand-50 py-24"
+      className="relative scroll-mt-20 overflow-hidden bg-brand-50 py-16 sm:py-24"
     >
       <div
         aria-hidden="true"
@@ -134,7 +134,7 @@ export default function Booking() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
-          className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-brand-600 via-brand-700 to-brand-900 p-8 text-white shadow-2xl shadow-brand-900/25 lg:col-span-2"
+          className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-brand-600 via-brand-700 to-brand-900 p-6 text-white shadow-2xl shadow-brand-900/25 sm:p-8 lg:col-span-2"
         >
           <motion.div
             aria-hidden="true"
@@ -146,10 +146,10 @@ export default function Booking() {
             <span className="grid size-14 place-items-center rounded-2xl bg-white/15 backdrop-blur">
               <CalendarDays className="size-7" />
             </span>
-            <h2 className="mt-6 font-display text-4xl font-bold leading-tight">
+            <h2 className="mt-6 font-display text-3xl font-bold leading-tight text-balance sm:text-4xl">
               {t('booking.title')}
             </h2>
-            <p className="mt-4 text-lg leading-relaxed text-white/80">
+            <p className="mt-4 text-base leading-relaxed text-white/80 sm:text-lg">
               {t('booking.subtitle')}
             </p>
 
@@ -158,20 +158,20 @@ export default function Booking() {
               className="mt-8 flex items-center gap-3 font-semibold transition hover:text-brand-100"
             >
               <span className="grid size-11 place-items-center rounded-full bg-white/15">
-                <Phone className="size-5" />
+                <Phone className="size-5 shrink-0" />
               </span>
               {clinic.phoneDisplay}
             </a>
 
             <h3 className="mt-8 flex items-center gap-3 text-sm font-bold uppercase tracking-widest text-white/70">
-              <Clock className="size-4" />
+              <Clock className="size-4 shrink-0" />
               {t('contact.hours')}
             </h3>
             <ul className="mt-3 space-y-2">
               {clinic.hours.map(({ days, time }) => (
                 <li
                   key={days}
-                  className="flex justify-between gap-4 border-b border-white/10 pb-2 text-sm"
+                  className="flex flex-wrap justify-between gap-x-3 gap-y-1 border-b border-white/10 pb-2 text-sm"
                 >
                   <span className="font-semibold">{days}</span>
                   <span className="text-white/80">{time}</span>
@@ -189,7 +189,7 @@ export default function Booking() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.6 }}
-          className="rounded-3xl border border-brand-100 bg-white p-6 shadow-xl shadow-brand-900/10 sm:p-8 lg:col-span-3"
+          className="rounded-3xl border border-brand-100 bg-white p-4 shadow-xl shadow-brand-900/10 sm:p-8 lg:col-span-3"
         >
           <div className="grid gap-5 sm:grid-cols-2">
             {/* Name */}
@@ -331,11 +331,11 @@ export default function Booking() {
             disabled={isPending}
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
-            className="group relative mt-7 flex w-full items-center justify-center gap-3 overflow-hidden rounded-full bg-emerald-500 px-8 py-4 text-lg font-bold text-white shadow-xl shadow-emerald-500/30 disabled:opacity-70"
+            className="group relative mt-7 flex min-h-12 w-full items-center justify-center gap-2 overflow-hidden rounded-full bg-emerald-500 px-3 py-3 text-base font-bold text-white shadow-xl shadow-emerald-500/30 disabled:opacity-70 sm:gap-3 sm:px-8 sm:py-4 sm:text-lg"
           >
-            <MessageCircle className="size-6" />
+            <MessageCircle className="size-5 shrink-0 sm:size-6" />
             {isPending ? t('booking.sending') : t('booking.submit')}
-            <Send className="size-5 transition-transform duration-300 group-hover:translate-x-1.5" />
+            <Send className="size-5 shrink-0 transition-transform duration-300 group-hover:translate-x-1.5" />
             <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
           </motion.button>
 

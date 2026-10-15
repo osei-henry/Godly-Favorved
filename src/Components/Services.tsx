@@ -19,7 +19,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="relative scroll-mt-20 overflow-hidden bg-white py-24"
+      className="relative scroll-mt-20 overflow-hidden bg-white py-16 sm:py-24"
     >
       <div
         aria-hidden="true"
@@ -35,11 +35,11 @@ export default function Services() {
           transition={{ duration: 0.6 }}
           className="mx-auto max-w-2xl text-center"
         >
-          <h2 className="font-display text-4xl font-bold text-brand-900 sm:text-5xl">
+          <h2 className="font-display text-3xl font-bold leading-tight text-balance text-brand-900 sm:text-5xl">
             {t('services.title')}
           </h2>
           <div className="mx-auto mt-4 h-1 w-20 rounded-full bg-gradient-to-r from-brand-500 to-accent-500" />
-          <p className="mt-5 text-lg text-ink/70">{t('services.subtitle')}</p>
+          <p className="mt-5 text-base leading-relaxed text-ink/70 sm:text-lg">{t('services.subtitle')}</p>
         </motion.div>
 
         {/* Cards */}
@@ -68,7 +68,7 @@ export default function Services() {
 
               {/* Icon */}
               <span className="relative grid size-14 place-items-center rounded-2xl bg-gradient-to-br from-brand-500 to-brand-700 text-white shadow-lg shadow-brand-500/30 transition-transform duration-300 group-hover:rotate-6 group-hover:scale-110">
-                <Icon className="size-7" />
+                <Icon className="size-7 shrink-0" />
               </span>
 
               <h3 className="mt-6 text-xl font-bold text-brand-900">
@@ -83,7 +83,7 @@ export default function Services() {
                 className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-accent-500 transition-colors hover:text-accent-600"
               >
                 {t('nav.bookNow')}
-                <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1.5" />
+                <ArrowRight className="size-4 shrink-0 transition-transform duration-300 group-hover:translate-x-1.5" />
               </a>
             </motion.article>
           ))}

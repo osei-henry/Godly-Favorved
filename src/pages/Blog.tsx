@@ -40,11 +40,11 @@ export default function Blog() {
             transition={{ duration: 0.6 }}
             className="mx-auto max-w-2xl text-center"
           >
-            <h1 className="font-display text-4xl font-bold text-brand-900 sm:text-6xl">
+            <h1 className="font-display text-[clamp(2rem,9vw,3.75rem)] font-bold leading-tight text-balance text-brand-900 sm:text-6xl">
               {t('blog.title')}
             </h1>
             <div className="mx-auto mt-4 h-1 w-20 rounded-full bg-gradient-to-r from-brand-500 to-accent-500" />
-            <p className="mt-5 text-lg text-ink/70">{t('blog.subtitle')}</p>
+            <p className="mt-5 text-base leading-relaxed text-ink/70 sm:text-lg">{t('blog.subtitle')}</p>
           </motion.div>
 
           {/* Category filters */}
@@ -55,7 +55,7 @@ export default function Blog() {
                 <button
                   key={f}
                   onClick={() => setFilter(f)}
-                  className={`relative rounded-full px-5 py-2.5 text-sm font-bold transition-colors ${
+                  className={`relative min-h-11 rounded-full px-4 py-2.5 text-sm font-bold transition-colors sm:px-5 ${
                     active ? 'text-white' : 'text-brand-700 hover:bg-white'
                   }`}
                 >
@@ -85,7 +85,7 @@ export default function Blog() {
               ))}
             </div>
           ) : (
-            <p className="mt-16 text-center text-lg text-ink/60">
+            <p className="mt-16 text-center text-base text-ink/60 sm:text-lg">
               {t('blog.empty')}
             </p>
           )}

@@ -8,12 +8,12 @@ import { languages } from '../i18n'
 const MotionLink = motion.create(Link)
 
 const items = [
-  { id: 'home', to: '/home', label: 'nav.home' },
-  { id: 'services', to: '/services', label: 'nav.services' },
-  { id: 'insurance', to: '/insurance', label: 'nav.insurance' },
-  { id: 'doctors', to: '/doctors', label: 'nav.doctors' },
+  { id: 'home', to: '/#home', label: 'nav.home' },
+  { id: 'services', to: '/#services', label: 'nav.services' },
+  { id: 'insurance', to: '/#insurance', label: 'nav.insurance' },
+  { id: 'doctors', to: '/#doctors', label: 'nav.doctors' },
   { id: 'blog', to: '/blog', label: 'blog.title' },
-  { id: 'contact', to: '/contact', label: 'nav.contact' },
+  { id: 'contact', to: '/#contact', label: 'nav.contact' },
 ] as const
 
 const linkBase =
@@ -119,12 +119,12 @@ export default function Navbar() {
               onClick={() => setLangOpen((open) => !open)}
               aria-haspopup="menu"
               aria-expanded={langOpen}
-              className="flex items-center gap-1.5 rounded-full border border-brand-100 bg-white/70 px-3 py-2 text-sm font-semibold text-brand-900 transition hover:bg-brand-50"
+              className="flex min-h-11 items-center gap-1.5 rounded-full border border-brand-100 bg-white/70 px-3 py-2 text-sm font-semibold text-brand-900 transition hover:bg-brand-50"
             >
-              <Globe className="size-4 text-brand-600" />
+              <Globe className="size-4 shrink-0 text-brand-600" />
               <span className="hidden sm:inline">{currentLabel}</span>
               <ChevronDown
-                className={`size-4 transition-transform ${langOpen ? 'rotate-180' : ''}`}
+                className={`size-4 shrink-0 transition-transform ${langOpen ? 'rotate-180' : ''}`}
               />
             </button>
 
@@ -183,7 +183,7 @@ export default function Navbar() {
             onClick={() => setMenuOpen((open) => !open)}
             aria-label="Menu"
             aria-expanded={menuOpen}
-            className="grid size-10 place-items-center rounded-full border border-brand-100 bg-white/70 text-brand-900 xl:hidden"
+            className="grid size-11 shrink-0 place-items-center rounded-full border border-brand-100 bg-white/70 text-brand-900 xl:hidden"
           >
             {menuOpen ? <X className="size-5" /> : <Menu className="size-5" />}
           </button>
@@ -205,7 +205,7 @@ export default function Navbar() {
                   key={id}
                   to={to}
                   onClick={() => setMenuOpen(false)}
-                  className="rounded-xl px-3 py-3 text-base font-semibold text-brand-900 transition hover:bg-brand-50"
+                  className="min-h-12 rounded-xl px-3 py-3 text-base font-semibold text-brand-900 transition hover:bg-brand-50"
                 >
                   {t(label)}
                 </Link>

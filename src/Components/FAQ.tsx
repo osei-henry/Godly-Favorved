@@ -12,7 +12,7 @@ export default function FAQ() {
   return (
     <section
       id="faq"
-      className="relative scroll-mt-20 overflow-hidden bg-white py-24"
+      className="relative scroll-mt-20 overflow-hidden bg-white py-16 sm:py-24"
     >
       <div
         aria-hidden="true"
@@ -28,11 +28,11 @@ export default function FAQ() {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <h2 className="font-display text-4xl font-bold text-brand-900 sm:text-5xl">
+          <h2 className="font-display text-3xl font-bold leading-tight text-balance text-brand-900 sm:text-5xl">
             {t('faq.title')}
           </h2>
           <div className="mx-auto mt-4 h-1 w-20 rounded-full bg-gradient-to-r from-brand-500 to-accent-500" />
-          <p className="mt-5 text-lg text-ink/70">{t('faq.subtitle')}</p>
+          <p className="mt-5 text-base leading-relaxed text-ink/70 sm:text-lg">{t('faq.subtitle')}</p>
         </motion.div>
 
         {/* Questions */}
@@ -55,9 +55,9 @@ export default function FAQ() {
                 <button
                   onClick={() => setOpen(isOpen ? null : id)}
                   aria-expanded={isOpen}
-                  className="flex w-full items-center justify-between gap-4 p-5 text-left"
+                  className="flex w-full items-center justify-between gap-3 p-4 text-left sm:gap-4 sm:p-5"
                 >
-                  <span className="text-lg font-bold text-brand-900">
+                  <span className="text-base font-bold leading-snug text-brand-900 sm:text-lg">
                     {t(`faq.items.${id}.q`)}
                   </span>
                   <motion.span
@@ -69,7 +69,7 @@ export default function FAQ() {
                         : 'bg-brand-100 text-brand-600'
                     }`}
                   >
-                    <Plus className="size-5" />
+                    <Plus className="size-5 shrink-0" />
                   </motion.span>
                 </button>
 
@@ -82,7 +82,7 @@ export default function FAQ() {
                       transition={{ duration: 0.3, ease: 'easeInOut' }}
                       className="overflow-hidden"
                     >
-                      <p className="px-5 pb-5 text-lg leading-relaxed text-ink/75">
+                      <p className="px-4 pb-4 text-base leading-relaxed text-ink/75 sm:px-5 sm:pb-5 sm:text-lg">
                         {t(`faq.items.${id}.a`)}
                       </p>
                     </motion.div>

@@ -18,7 +18,7 @@ export default function WhatsAppButton() {
       transition={{ delay: 1.5, type: 'spring', stiffness: 260, damping: 18 }}
       whileHover={{ scale: 1.12, rotate: -8 }}
       whileTap={{ scale: 0.92 }}
-      className="fixed bottom-5 right-5 z-40 grid size-14 place-items-center rounded-full bg-emerald-500 text-white shadow-2xl shadow-emerald-500/40 sm:bottom-7 sm:right-7 sm:size-16"
+      className="fixed bottom-[max(1rem,env(safe-area-inset-bottom))] right-[max(1rem,env(safe-area-inset-right))] z-40 grid size-14 place-items-center rounded-full bg-emerald-500 text-white shadow-2xl shadow-emerald-500/40 sm:bottom-7 sm:right-7 sm:size-16"
     >
       <span className="absolute inset-0 animate-ping rounded-full bg-emerald-500/40" />
       <MessageCircle className="relative size-7 sm:size-8" />

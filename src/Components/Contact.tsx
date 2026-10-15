@@ -33,7 +33,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative scroll-mt-20 overflow-hidden bg-white py-24"
+      className="relative scroll-mt-20 overflow-hidden bg-white py-16 sm:py-24"
     >
       <div
         aria-hidden="true"
@@ -49,7 +49,7 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           className="mx-auto max-w-2xl text-center"
         >
-          <h2 className="font-display text-4xl font-bold text-brand-900 sm:text-5xl">
+          <h2 className="font-display text-3xl font-bold leading-tight text-balance text-brand-900 sm:text-5xl">
             {t('contact.title')}
           </h2>
           <div className="mx-auto mt-4 h-1 w-20 rounded-full bg-gradient-to-r from-brand-500 to-accent-500" />
@@ -163,7 +163,7 @@ export default function Contact() {
                 transition={{ duration: 1.6, repeat: Infinity, ease: 'easeInOut' }}
                 className="flex flex-col items-center"
               >
-                <span className="whitespace-nowrap rounded-full bg-white px-3 py-1.5 text-xs font-bold text-brand-900 shadow-lg">
+                <span className="max-w-[calc(100vw-5rem)] rounded-full bg-white px-3 py-1.5 text-center text-xs font-bold text-brand-900 shadow-lg">
                   {clinic.name}
                 </span>
                 <MapPin className="size-12 fill-accent-500 text-white drop-shadow-lg" />

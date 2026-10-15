@@ -35,6 +35,23 @@ body {
   overflow-x: clip;
 }
 
+/* Allow long translated words and URLs to wrap inside narrow layouts. */
+*,
+*::before,
+*::after {
+  min-width: 0;
+}
+
+h1,
+h2,
+h3,
+p,
+a,
+button,
+label {
+  overflow-wrap: anywhere;
+}
+
 /* Lighter page on phones: hide the big decorative blurred circles */
 @media (max-width: 640px) {
   [aria-hidden="true"].blur-3xl {

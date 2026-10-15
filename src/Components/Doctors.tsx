@@ -54,7 +54,7 @@ export default function Doctors() {
   return (
     <section
       id="doctors"
-      className="relative scroll-mt-20 overflow-hidden bg-white py-24"
+      className="relative scroll-mt-20 overflow-hidden bg-white py-16 sm:py-24"
     >
       <div
         aria-hidden="true"
@@ -70,11 +70,11 @@ export default function Doctors() {
           transition={{ duration: 0.6 }}
           className="mx-auto max-w-2xl text-center"
         >
-          <h2 className="font-display text-4xl font-bold text-brand-900 sm:text-5xl">
+          <h2 className="font-display text-3xl font-bold leading-tight text-balance text-brand-900 sm:text-5xl">
             {t('doctors.title')}
           </h2>
           <div className="mx-auto mt-4 h-1 w-20 rounded-full bg-gradient-to-r from-brand-500 to-accent-500" />
-          <p className="mt-5 text-lg text-ink/70">{t('doctors.subtitle')}</p>
+          <p className="mt-5 text-base leading-relaxed text-ink/70 sm:text-lg">{t('doctors.subtitle')}</p>
         </motion.div>
 
         {/* Doctor cards */}

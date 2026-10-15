@@ -57,7 +57,7 @@ export default function Insurance() {
   return (
     <section
       id="insurance"
-      className="relative scroll-mt-20 overflow-hidden bg-brand-50 py-24"
+      className="relative scroll-mt-20 overflow-hidden bg-brand-50 py-16 sm:py-24"
     >
       <div
         aria-hidden="true"
@@ -77,11 +77,11 @@ export default function Insurance() {
           transition={{ duration: 0.6 }}
           className="mx-auto max-w-2xl text-center"
         >
-          <h2 className="font-display text-4xl font-bold text-brand-900 sm:text-5xl">
+          <h2 className="font-display text-3xl font-bold leading-tight text-balance text-brand-900 sm:text-5xl">
             {t('insurance.title')}
           </h2>
           <div className="mx-auto mt-4 h-1 w-20 rounded-full bg-gradient-to-r from-brand-500 to-accent-500" />
-          <p className="mt-5 text-lg text-ink/70">{t('insurance.subtitle')}</p>
+          <p className="mt-5 text-base leading-relaxed text-ink/70 sm:text-lg">{t('insurance.subtitle')}</p>
         </motion.div>
 
         <div className="mt-14 grid gap-8 lg:grid-cols-2">
@@ -185,7 +185,7 @@ export default function Insurance() {
           transition={{ duration: 0.6 }}
           className="mt-10 flex flex-col items-center justify-between gap-5 rounded-3xl bg-gradient-to-r from-brand-700 to-brand-900 p-7 text-center text-white shadow-xl shadow-brand-900/20 sm:flex-row sm:text-left"
         >
-          <p className="max-w-2xl text-lg font-medium">{t('insurance.note')}</p>
+          <p className="max-w-2xl text-base font-medium leading-relaxed sm:text-lg">{t('insurance.note')}</p>
           <motion.a
             href={whatsappLink}
             target="_blank"
@@ -194,7 +194,7 @@ export default function Insurance() {
             whileTap={{ scale: 0.95 }}
             className="inline-flex shrink-0 items-center gap-2.5 rounded-full bg-emerald-500 px-6 py-3.5 font-bold text-white shadow-lg shadow-emerald-500/30"
           >
-            <MessageCircle className="size-5" />
+            <MessageCircle className="size-5 shrink-0" />
             {t('booking.submit')}
           </motion.a>
         </motion.div>

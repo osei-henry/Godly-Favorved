@@ -94,7 +94,7 @@ export default function Hero() {
 
           <motion.h1
             variants={item}
-            className="font-display text-4xl min-[400px]:text-5xl font-bold text-balance leading-[1.08] text-brand-900 sm:text-6xl lg:text-7xl"
+            className="font-display text-[clamp(2rem,9vw,3rem)] font-bold leading-[1.08] text-balance text-brand-900 sm:text-6xl lg:text-7xl"
           >
             {t('hero.title')}{' '}
             <span className="relative inline-block bg-gradient-to-r from-accent-500 to-accent-600 bg-clip-text text-transparent">
@@ -120,7 +120,7 @@ export default function Hero() {
 
           <motion.p
             variants={item}
-            className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-ink/70 lg:mx-0"
+            className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-ink/70 sm:text-lg lg:mx-0"
           >
             {t('hero.subtitle')}
           </motion.p>
@@ -133,11 +133,11 @@ export default function Hero() {
               href="#booking"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="group relative inline-flex items-center gap-2.5 overflow-hidden rounded-full bg-accent-500 px-7 py-4 font-bold text-white shadow-xl shadow-accent-500/30"
+              className="group relative inline-flex min-h-12 w-full max-w-sm items-center justify-center gap-2.5 overflow-hidden rounded-full bg-accent-500 px-4 py-3 font-bold text-white shadow-xl shadow-accent-500/30 sm:w-auto sm:px-7 sm:py-4"
             >
-              <CalendarCheck className="size-5" />
+              <CalendarCheck className="size-5 shrink-0" />
               {t('hero.ctaPrimary')}
-              <ArrowRight className="size-5 transition-transform group-hover:translate-x-1" />
+              <ArrowRight className="size-5 shrink-0 transition-transform group-hover:translate-x-1" />
               <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
             </motion.a>
 
@@ -145,7 +145,7 @@ export default function Hero() {
               href="#services"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center gap-2 rounded-full border-2 border-brand-200 bg-white px-7 py-3.5 font-bold text-brand-700 transition-colors hover:border-brand-500 hover:bg-brand-50"
+              className="inline-flex min-h-12 w-full max-w-sm items-center justify-center gap-2 rounded-full border-2 border-brand-200 bg-white px-4 py-3 font-bold text-brand-700 transition-colors hover:border-brand-500 hover:bg-brand-50 sm:w-auto sm:px-7 sm:py-3.5"
             >
               {t('hero.ctaSecondary')}
             </motion.a>

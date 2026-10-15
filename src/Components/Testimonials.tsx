@@ -28,7 +28,7 @@ export default function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="relative scroll-mt-20 overflow-hidden bg-brand-900 py-24 text-white"
+      className="relative scroll-mt-20 overflow-hidden bg-brand-900 py-16 text-white sm:py-24"
     >
       <motion.div
         aria-hidden="true"
@@ -52,11 +52,11 @@ export default function Testimonials() {
           transition={{ duration: 0.6 }}
           className="mx-auto max-w-2xl text-center"
         >
-          <h2 className="font-display text-4xl font-bold sm:text-5xl">
+          <h2 className="font-display text-3xl font-bold leading-tight text-balance sm:text-5xl">
             {t('testimonials.title')}
           </h2>
           <div className="mx-auto mt-4 h-1 w-20 rounded-full bg-gradient-to-r from-brand-200 to-accent-500" />
-          <p className="mt-5 text-lg text-white/70">
+          <p className="mt-5 text-base leading-relaxed text-white/70 sm:text-lg">
             {t('testimonials.subtitle')}
           </p>
         </motion.div>
@@ -93,7 +93,7 @@ export default function Testimonials() {
                 ))}
               </div>
 
-              <blockquote className="mt-4 flex-1 text-lg leading-relaxed text-white/90">
+              <blockquote className="mt-4 flex-1 text-base leading-relaxed text-white/90 sm:text-lg">
                 {quote}
               </blockquote>
 

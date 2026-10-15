@@ -28,7 +28,7 @@ function Picture({
         loading="lazy"
         className={
           large
-            ? 'max-h-[75vh] w-auto rounded-3xl'
+            ? 'max-h-[65dvh] max-w-[calc(100vw-2rem)] rounded-2xl object-contain sm:max-h-[75vh] sm:rounded-3xl'
             : 'size-full bg-white object-cover object-top'
         }
       />
@@ -67,7 +67,7 @@ export default function Gallery() {
   return (
     <section
       id="gallery"
-      className="relative scroll-mt-20 overflow-hidden bg-brand-50 py-24"
+      className="relative scroll-mt-20 overflow-hidden bg-brand-50 py-16 sm:py-24"
     >
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
         {/* Heading */}
@@ -78,15 +78,15 @@ export default function Gallery() {
           transition={{ duration: 0.6 }}
           className="mx-auto max-w-2xl text-center"
         >
-          <h2 className="font-display text-4xl font-bold text-brand-900 sm:text-5xl">
+          <h2 className="font-display text-3xl font-bold leading-tight text-balance text-brand-900 sm:text-5xl">
             {t('gallery.title')}
           </h2>
           <div className="mx-auto mt-4 h-1 w-20 rounded-full bg-gradient-to-r from-brand-500 to-accent-500" />
-          <p className="mt-5 text-lg text-ink/70">{t('gallery.subtitle')}</p>
+          <p className="mt-5 text-base leading-relaxed text-ink/70 sm:text-lg">{t('gallery.subtitle')}</p>
         </motion.div>
 
         {/* Photo grid */}
-        <div className="mt-14 grid auto-rows-[10rem] grid-flow-dense grid-cols-2 gap-4 sm:auto-rows-[13rem] md:grid-cols-3">
+        <div className="mt-10 grid auto-rows-[9rem] grid-flow-dense grid-cols-2 gap-3 min-[400px]:auto-rows-[10rem] sm:mt-14 sm:auto-rows-[13rem] sm:gap-4 md:grid-cols-3">
           {galleryItems.map((item, i) => (
             <motion.button
               key={item.id}
@@ -160,10 +160,10 @@ export default function Gallery() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.25 }}
               onClick={(e) => e.stopPropagation()}
-              className="flex flex-col items-center"
+              className="flex max-h-[calc(100dvh-2rem)] max-w-full flex-col items-center"
             >
               <Picture item={current} index={open} large />
-              <figcaption className="mt-4 text-center text-lg font-semibold text-white">
+              <figcaption className="mt-3 max-w-[calc(100vw-2rem)] text-center text-base font-semibold text-white sm:mt-4 sm:text-lg">
                 {current.caption}
                 <span className="ml-3 text-sm font-normal text-white/60">
                   {open + 1} / {total}

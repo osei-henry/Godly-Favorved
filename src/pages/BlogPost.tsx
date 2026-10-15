@@ -19,7 +19,7 @@ function renderBlock(block: Block, index: number) {
       )
     case 'p':
       return (
-        <p key={index} className="mt-5 text-lg leading-relaxed text-ink/80">
+        <p key={index} className="mt-5 text-base leading-relaxed text-ink/80 sm:text-lg">
           {block.text}
         </p>
       )
@@ -130,7 +130,7 @@ export default function BlogPost() {
             )}
           </div>
 
-          <h1 className="mt-4 font-display text-4xl font-bold leading-tight text-brand-900 sm:text-5xl">
+          <h1 className="mt-4 font-display text-[clamp(2rem,9vw,3rem)] font-bold leading-tight text-balance text-brand-900 sm:text-5xl">
             {post.title}
           </h1>
 
